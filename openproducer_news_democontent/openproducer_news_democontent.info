@@ -1,0 +1,39 @@
+name = OpenProducer News Demo Content
+description = The magic that allows for demo content for news.
+core = 7.x
+package = OpenProducer Demo Content
+php = 5.2.4
+version = 7.x-1.x-alpha6
+project = openproducer_news_democontent
+dependencies[] = defaultcontent
+features[content][] = openproducer-news-defaultcontent-1
+features[content][] = openproducer-news-defaultcontent-2
+features[content][] = openproducer-news-defaultcontent-3
+features[content][] = openproducer-news-defaultcontent-4
+features[content][] = openproducer-news-defaultcontent-5
+features[content][] = openproducer-news-defaultcontent-6
+features[features_api][] = api:1
+<<<<<<< HEAD:openproducer_news_democontent/openproducer_news_democontent.info
+project status url = apps.rosenstrauch.com/fserver
+
+
+; Information added by drush on 2013-03-28
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "openproducer_news"
+datestamp = "1364538864"
+
+=======
+>>>>>>> c759c856b78b4546a7f196b564b2f4a756b99626:openproducer_news_democontent.info
+
+
+
+
+
+
+; Information added by drush on 2013-11-12
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "openproducer_news"
+datestamp = "1384243642"
+
