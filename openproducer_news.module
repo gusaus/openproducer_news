@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the OpenProducer News feature.
+ * Code for the openproducer News feature.
  */
 
 include_once 'openproducer_news.features.inc';
