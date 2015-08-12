@@ -81,13 +81,13 @@ function openproducer_news_default_page_manager_pages() {
       'sort_by' => NULL,
       'sort_order' => NULL,
     ),
-    'use_pager' => 0,
-    'pager_id' => '',
-    'offset' => '0',
+    'use_pager' => NULL,
+    'pager_id' => NULL,
+    'offset' => '2',
     'link_to_view' => NULL,
     'more_link' => 1,
     'path' => NULL,
-    'view_settings' => 'rendered_entity',
+    'view_settings' => 'nodes',
     'header_type' => 'none',
     'override_title' => '',
     'override_title_text' => '',
@@ -138,12 +138,17 @@ function openproducer_news_default_page_manager_pages() {
   $pane->cache = array();
   $pane->style = array(
     'settings' => array(
-      'modifier_class' => '',
-      'hide_classes' => array(),
-      'additional_classes' => array(),
-      'collapsible' => FALSE,
-      'collapsed' => '',
-      'region_title' => '',
+      'hide_classes' => array(
+        'hidden-xs' => 0,
+        'hidden-sm' => 0,
+        'hidden-md' => 0,
+        'hidden-lg' => 0,
+      ),
+      'additional_classes' => array(
+        'pull-left' => 0,
+        'pull-right' => 0,
+        'clearfix' => 0,
+      ),
     ),
     'style' => 'bootstrap_styles:jumbotron',
   );
