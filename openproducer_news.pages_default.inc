@@ -47,7 +47,7 @@ function openproducer_news_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'bonham_flipped';
+  $display->layout = 'floyd_flipped';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -110,6 +110,52 @@ function openproducer_news_default_page_manager_pages() {
   $display->content['new-72bfc0cc-02ea-46fe-9f1e-4f55cf0d981d'] = $pane;
   $display->panels['contentmain'][0] = 'new-72bfc0cc-02ea-46fe-9f1e-4f55cf0d981d';
   $pane = new stdClass();
+  $pane->pid = 'new-0b537cba-bf7f-44c1-8d35-33ebfff7f217';
+  $pane->panel = 'sidebar';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'events-panel_pane_3';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'more_link' => 1,
+    'items_per_page' => '3',
+    'fields_override' => array(
+      'field_featured_image' => 1,
+      'title' => 0,
+      'field_event_date' => 0,
+      'field_event_venue' => 0,
+      'field_event_city' => 0,
+      'field_event_state' => 0,
+      'nothing' => 1,
+    ),
+    'override_title' => '',
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+    'view_settings' => 'fields',
+    'header_type' => 'none',
+    'view_mode' => 'teaser',
+    'widget_title' => 'Upcoming Shows',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => array(
+      'modifier_class' => '',
+      'hide_classes' => array(),
+      'additional_classes' => array(),
+      'collapsible' => FALSE,
+      'collapsed' => '',
+      'region_title' => '',
+    ),
+    'style' => 'bootstrap_styles:well',
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '0b537cba-bf7f-44c1-8d35-33ebfff7f217';
+  $display->content['new-0b537cba-bf7f-44c1-8d35-33ebfff7f217'] = $pane;
+  $display->panels['sidebar'][0] = 'new-0b537cba-bf7f-44c1-8d35-33ebfff7f217';
+  $pane = new stdClass();
   $pane->pid = 'new-994a76b3-9c20-40cf-bc4a-a3951b487de6';
   $pane->panel = 'sidebar';
   $pane->type = 'views_panes';
@@ -160,68 +206,11 @@ function openproducer_news_default_page_manager_pages() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '994a76b3-9c20-40cf-bc4a-a3951b487de6';
   $display->content['new-994a76b3-9c20-40cf-bc4a-a3951b487de6'] = $pane;
-  $display->panels['sidebar'][0] = 'new-994a76b3-9c20-40cf-bc4a-a3951b487de6';
-  $pane = new stdClass();
-  $pane->pid = 'new-4c6ec5de-b60b-4955-a637-c96ec3a014f5';
-  $pane->panel = 'sidebar';
-  $pane->type = 'views_panes';
-  $pane->subtype = 'events-panel_pane_3';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'items_per_page' => '3',
-    'fields_override' => array(
-      'title' => 1,
-      'field_event_date' => 1,
-      'field_event_venue' => 1,
-      'field_event_city' => 1,
-      'field_event_state' => 1,
-    ),
-    'view_mode' => 'teaser',
-    'widget_title' => NULL,
-    'exposed' => array(
-      'sort_by' => NULL,
-      'sort_order' => NULL,
-    ),
-    'use_pager' => NULL,
-    'pager_id' => NULL,
-    'offset' => NULL,
-    'link_to_view' => NULL,
-    'more_link' => 1,
-    'path' => NULL,
-    'view_settings' => 'fields',
-    'header_type' => 'none',
-    'override_title' => '',
-    'override_title_text' => '',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => array(
-      'hide_classes' => array(
-        'hidden-xs' => 0,
-        'hidden-sm' => 0,
-        'hidden-md' => 0,
-        'hidden-lg' => 0,
-      ),
-      'additional_classes' => array(
-        'pull-left' => 0,
-        'pull-right' => 0,
-        'clearfix' => 0,
-      ),
-    ),
-    'style' => 'bootstrap_styles:well',
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = '4c6ec5de-b60b-4955-a637-c96ec3a014f5';
-  $display->content['new-4c6ec5de-b60b-4955-a637-c96ec3a014f5'] = $pane;
-  $display->panels['sidebar'][1] = 'new-4c6ec5de-b60b-4955-a637-c96ec3a014f5';
+  $display->panels['sidebar'][1] = 'new-994a76b3-9c20-40cf-bc4a-a3951b487de6';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

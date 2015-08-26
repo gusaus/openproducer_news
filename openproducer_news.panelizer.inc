@@ -203,7 +203,7 @@ function openproducer_news_panelizer_defaults() {
     'view_settings' => 'fields',
     'header_type' => 'none',
     'view_mode' => 'teaser',
-    'widget_title' => 'Upcoming shows',
+    'widget_title' => 'Upcoming Shows',
   );
   $pane->cache = array();
   $pane->style = array(

@@ -21,6 +21,7 @@ features[features_api][] = api:2
 features[field_instance][] = node-news-body
 features[field_instance][] = node-news-field_featured_image
 features[field_instance][] = node-news-field_featured_status
+features[image][] = carousel
 features[node][] = news
 features[page_manager_pages][] = news
 features[panelizer_defaults][] = node:news:default
