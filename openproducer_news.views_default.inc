@@ -262,7 +262,10 @@ function openproducer_news_views_default_views() {
   $handler->display->display_options['style_options']['pause'] = 0;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_plugin'] = 'views_bootstrap_carousel_plugin_rows';
+  $handler->display->display_options['row_options']['image'] = 'field_featured_image';
+  $handler->display->display_options['row_options']['title'] = 'title';
+  $handler->display->display_options['row_options']['description'] = 'body';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
@@ -282,7 +285,7 @@ function openproducer_news_views_default_views() {
   $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
-    'image_style' => 'panopoly_image_spotlight',
+    'image_style' => 'carousel',
     'image_link' => 'content',
   );
   /* Field: Content: Title */
@@ -300,7 +303,7 @@ function openproducer_news_views_default_views() {
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '500',
+    'trim_length' => '200',
   );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
