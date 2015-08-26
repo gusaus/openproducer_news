@@ -71,8 +71,8 @@ function openproducer_news_default_page_manager_pages() {
   $pane->access = array();
   $pane->configuration = array(
     'view_mode' => 'teaser',
-    'widget_title' => 'Latest News',
-    'items_per_page' => '3',
+    'widget_title' => '',
+    'items_per_page' => '0',
     'exposed' => array(
       'widget_title' => 'Latest News',
       'more_link' => 1,
@@ -81,16 +81,22 @@ function openproducer_news_default_page_manager_pages() {
       'sort_by' => NULL,
       'sort_order' => NULL,
     ),
-    'use_pager' => NULL,
-    'pager_id' => NULL,
-    'offset' => '2',
+    'use_pager' => 0,
+    'pager_id' => '',
+    'offset' => '0',
     'link_to_view' => NULL,
     'more_link' => 1,
     'path' => NULL,
-    'view_settings' => 'nodes',
+    'view_settings' => 'rendered_entity',
     'header_type' => 'none',
     'override_title' => '',
     'override_title_text' => '',
+    'fields_override' => array(
+      'field_featured_image' => 1,
+      'title' => 1,
+      'body' => 1,
+    ),
+    'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -103,62 +109,6 @@ function openproducer_news_default_page_manager_pages() {
   $pane->uuid = '72bfc0cc-02ea-46fe-9f1e-4f55cf0d981d';
   $display->content['new-72bfc0cc-02ea-46fe-9f1e-4f55cf0d981d'] = $pane;
   $display->panels['contentmain'][0] = 'new-72bfc0cc-02ea-46fe-9f1e-4f55cf0d981d';
-  $pane = new stdClass();
-  $pane->pid = 'new-61de7553-eea7-4d3e-9ccd-af6ab4defe6e';
-  $pane->panel = 'header';
-  $pane->type = 'views_panes';
-  $pane->subtype = 'news-panel_pane_3';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'view_mode' => 'teaser',
-    'widget_title' => '',
-    'items_per_page' => '0',
-    'exposed' => array(
-      'widget_title' => '',
-      'sort_by' => NULL,
-      'sort_order' => NULL,
-    ),
-    'use_pager' => NULL,
-    'pager_id' => NULL,
-    'offset' => NULL,
-    'link_to_view' => NULL,
-    'more_link' => NULL,
-    'path' => NULL,
-    'view_settings' => 'fields',
-    'header_type' => 'none',
-    'fields_override' => array(
-      'field_featured_image' => 1,
-      'title' => 1,
-      'body' => 1,
-    ),
-    'override_title' => '',
-    'override_title_text' => '',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => array(
-      'hide_classes' => array(
-        'hidden-xs' => 0,
-        'hidden-sm' => 0,
-        'hidden-md' => 0,
-        'hidden-lg' => 0,
-      ),
-      'additional_classes' => array(
-        'pull-left' => 0,
-        'pull-right' => 0,
-        'clearfix' => 0,
-      ),
-    ),
-    'style' => 'bootstrap_styles:jumbotron',
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '61de7553-eea7-4d3e-9ccd-af6ab4defe6e';
-  $display->content['new-61de7553-eea7-4d3e-9ccd-af6ab4defe6e'] = $pane;
-  $display->panels['header'][0] = 'new-61de7553-eea7-4d3e-9ccd-af6ab4defe6e';
   $pane = new stdClass();
   $pane->pid = 'new-994a76b3-9c20-40cf-bc4a-a3951b487de6';
   $pane->panel = 'sidebar';

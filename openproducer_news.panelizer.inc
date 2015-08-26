@@ -179,35 +179,31 @@ function openproducer_news_panelizer_defaults() {
   $display->content['new-d645dfab-105f-4efa-b320-033c9e9b077a'] = $pane;
   $display->panels['sidebar'][0] = 'new-d645dfab-105f-4efa-b320-033c9e9b077a';
   $pane = new stdClass();
-  $pane->pid = 'new-a67ba933-6d30-4716-ac02-6d32fca30cde';
+  $pane->pid = 'new-6e9e2a85-a442-4920-af64-643fe26b64f2';
   $pane->panel = 'sidebar';
   $pane->type = 'views_panes';
   $pane->subtype = 'events-panel_pane_3';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
+    'more_link' => 1,
     'items_per_page' => '3',
     'fields_override' => array(
-      'title' => 1,
-      'field_event_date' => 1,
-      'field_event_venue' => 1,
-      'field_event_city' => 1,
-      'field_event_state' => 1,
+      'field_featured_image' => 1,
+      'title' => 0,
+      'field_event_date' => 0,
+      'field_event_venue' => 0,
+      'field_event_city' => 0,
+      'field_event_state' => 0,
+      'nothing' => 1,
     ),
-    'view_mode' => 'teaser',
-    'widget_title' => NULL,
-    'exposed' => array(
-      'sort_by' => NULL,
-      'sort_order' => NULL,
-    ),
-    'use_pager' => NULL,
-    'pager_id' => NULL,
-    'offset' => NULL,
-    'link_to_view' => NULL,
-    'more_link' => NULL,
-    'path' => NULL,
+    'override_title' => '',
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
     'view_settings' => 'fields',
     'header_type' => 'none',
+    'view_mode' => 'teaser',
+    'widget_title' => 'Upcoming shows',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -226,16 +222,13 @@ function openproducer_news_panelizer_defaults() {
     ),
     'style' => 'bootstrap_styles:well',
   );
-  $pane->css = array(
-    'css_id' => 'events',
-    'css_class' => '',
-  );
+  $pane->css = array();
   $pane->extras = array();
   $pane->position = 1;
   $pane->locks = array();
-  $pane->uuid = 'a67ba933-6d30-4716-ac02-6d32fca30cde';
-  $display->content['new-a67ba933-6d30-4716-ac02-6d32fca30cde'] = $pane;
-  $display->panels['sidebar'][1] = 'new-a67ba933-6d30-4716-ac02-6d32fca30cde';
+  $pane->uuid = '6e9e2a85-a442-4920-af64-643fe26b64f2';
+  $display->content['new-6e9e2a85-a442-4920-af64-643fe26b64f2'] = $pane;
+  $display->panels['sidebar'][1] = 'new-6e9e2a85-a442-4920-af64-643fe26b64f2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
