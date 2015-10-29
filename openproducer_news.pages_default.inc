@@ -54,61 +54,68 @@ function openproducer_news_default_page_manager_pages() {
       'default' => NULL,
       'header' => NULL,
       'sidebar' => NULL,
-      'contentmain' => NULL,
+      'contentmain' => array(
+        'region_title' => '',
+        'hide_classes' => array(
+          'hidden-xs' => 0,
+          'hidden-sm' => 0,
+          'hidden-md' => 0,
+          'hidden-lg' => 0,
+        ),
+        'additional_classes' => array(
+          'pull-left' => 0,
+          'pull-right' => 0,
+          'clearfix' => 0,
+        ),
+      ),
+    ),
+    'contentmain' => array(
+      'style' => 'bootstrap_styles:well',
     ),
   );
   $display->cache = array();
-  $display->title = 'News';
+  $display->title = '%node:title';
   $display->uuid = '30c6ce38-f606-4d3f-a0aa-44a559021be0';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-72bfc0cc-02ea-46fe-9f1e-4f55cf0d981d';
+  $pane->pid = 'new-ca26ddbe-87b4-4d81-b0c6-36cac3bb93c4';
   $pane->panel = 'contentmain';
   $pane->type = 'views_panes';
   $pane->subtype = 'news-panel_pane_1';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'view_mode' => 'teaser',
-    'widget_title' => '',
-    'items_per_page' => '0',
-    'exposed' => array(
-      'widget_title' => 'Latest News',
-      'more_link' => 1,
-      'use_pager' => 1,
-      'pager_id' => '',
-      'sort_by' => NULL,
-      'sort_order' => NULL,
-    ),
-    'use_pager' => 0,
-    'pager_id' => '',
+    'more_link' => 0,
+    'use_pager' => 1,
+    'pager_id' => '0',
+    'items_per_page' => '20',
     'offset' => '0',
-    'link_to_view' => NULL,
-    'more_link' => 1,
-    'path' => NULL,
-    'view_settings' => 'rendered_entity',
-    'header_type' => 'none',
-    'override_title' => '',
-    'override_title_text' => '',
     'fields_override' => array(
       'field_featured_image' => 1,
       'title' => 1,
       'body' => 1,
     ),
+    'override_title' => '',
+    'override_title_text' => '',
     'override_title_heading' => 'h2',
+    'view_settings' => 'fields',
+    'header_type' => 'none',
+    'view_mode' => 'teaser',
+    'widget_title' => 'News',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
+    'style' => 'default',
   );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '72bfc0cc-02ea-46fe-9f1e-4f55cf0d981d';
-  $display->content['new-72bfc0cc-02ea-46fe-9f1e-4f55cf0d981d'] = $pane;
-  $display->panels['contentmain'][0] = 'new-72bfc0cc-02ea-46fe-9f1e-4f55cf0d981d';
+  $pane->uuid = 'ca26ddbe-87b4-4d81-b0c6-36cac3bb93c4';
+  $display->content['new-ca26ddbe-87b4-4d81-b0c6-36cac3bb93c4'] = $pane;
+  $display->panels['contentmain'][0] = 'new-ca26ddbe-87b4-4d81-b0c6-36cac3bb93c4';
   $pane = new stdClass();
   $pane->pid = 'new-0b537cba-bf7f-44c1-8d35-33ebfff7f217';
   $pane->panel = 'sidebar';
@@ -211,8 +218,8 @@ function openproducer_news_default_page_manager_pages() {
   $pane->uuid = '994a76b3-9c20-40cf-bc4a-a3951b487de6';
   $display->content['new-994a76b3-9c20-40cf-bc4a-a3951b487de6'] = $pane;
   $display->panels['sidebar'][1] = 'new-994a76b3-9c20-40cf-bc4a-a3951b487de6';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
+  $display->hide_title = PANELS_TITLE_PANE;
+  $display->title_pane = 'new-ca26ddbe-87b4-4d81-b0c6-36cac3bb93c4';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['news'] = $page;

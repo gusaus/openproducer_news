@@ -44,7 +44,7 @@ function openproducer_news_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
       ),
       'display' => array(),
@@ -111,7 +111,7 @@ function openproducer_news_strongarm() {
       ),
       'teaser' => array(
         'status' => 0,
-        'default' => 0,
+        'default' => 1,
         'choice' => 0,
       ),
       'featured' => array(
